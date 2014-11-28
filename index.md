@@ -6,8 +6,6 @@
 
 ---
 
-
-
 ### O mnie
 
 - Tata^2, mąż humanistki, mól książkowy, uparciuch, programista, konferencjoholik.  Don Kichot walczący z entropią. Kocha sprzeczności i humor. Wierzy w przypadek. Piwny filozof. W nielicznych wolnych chwilach harata w gałę (na bramce).
@@ -37,17 +35,19 @@ TODO: w pracy...
 
 ### DEMO: CSharpArgs refaktoring
 
-    [lang=cs]
-    // Example usage: Args.exe -l -p 4444 -d "C:\Windows\Temp"
-    private static void Main(string[] args)
-    {
-        var schema = "l,p#,d*";
-        var arg = new Args(schema, args);
-        var logging = arg.GetBoolean('l');
-        var port = arg.GetInt('p');
-        var directory = arg.GetString('d');
-        // ...
-    }
+```c
+// Example usage: Args.exe -l -p 4444 -d "C:\Windows\Temp"
+private static void Main(string[] args)
+{
+    var schema = "l,p#,d*";
+    var arg = new Args(schema, args);
+    var logging = arg.GetBoolean('l');
+    var port = arg.GetInt('p');
+    var directory = arg.GetString('d');
+    // ...
+}
+```
+
 
 ---
 
