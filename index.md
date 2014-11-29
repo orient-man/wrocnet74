@@ -29,8 +29,8 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 <!-- .element: class="fragment" data-fragment-index="1" -->
 ![Clean Code](./images/clean_code.jpg)
 
- - Opublikowana na początku 2007r.
  - Dobry prezent dla każdego programisty w zespole
+ - Opublikowana na początku 2007r.
  - Rozdział 14: refaktoring programu Args
  - Port 1-1 z Javy do C#
 
@@ -124,7 +124,65 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 ***
 
-![Functional Way](./images/fp-way.jpg)
+<!-- .slide: data-background="./images/skull.png" style="top: -50px !important;" -->
+# Monada
+
+---
+
+<!-- .slide: style="top: -100px !important;" -->
+![Barbie](./images/barbie_monad.png)
+
+---
+
+### Tako rzecze źródło wszelkiej wiedzy
+
+"Monada jest rodzajem <font color="#fa0">konstruktora abstrakcyjnego typu danych</font> [...] Monady pozwalają programiście <font color="#fa0">sprzęgać ze sobą kolejno wykonywane działania</font> i budować potoki danych, w których każda akcja jest materializacją wzorca <font color="#fa0">dekoratora z dodatkowymi regułami przetwarzającymi</font>.
+
+Formalnie monadę tworzy się definiując dwie operacje – wiązanie (ang. <font color="#fa0">bind</font>) i powrót (ang. <font color="#fa0">return</font>) [...] bla, bla, bla, Ginger, bla, bla, bla"
+
+http://pl.wikipedia.org/wiki/Monada_%28programowanie%29
+
+---
+
+### Ostatnia szansa: przez przykład
+```csharp
+public static Task<T> ToTask<T>(this T value) // aka "unit" lub "return"
+{
+    return Task<T>.Factory.StartNew(() => value);
+}
+
+public static Task<B> Bind<A, B>(this Task<A> a, Func<A, Task<B>> func)
+{
+    return a.ContinueWith(b => func(b.Result)).Unwrap();
+}
+
+public static Task<C> SelectMany<A, B, C>(
+    this Task<A> a, Func<A, Task<B>> func, Func<A, B, C> select)
+{
+    return a.Bind(
+        aval => func(aval).Bind(bval => select(aval, bval).ToTask()));
+}
+```
+
+---
+
+### Co to robi?
+
+```csharp
+Func<Task<int>> compute5 = () => 5.ToTask();
+Func<Task<int>> compute7 = () => 7.ToTask();
+Func<int, int, Task<int>> add = (x, y) => (x + y).ToTask();
+
+var r =
+    from a in compute5()
+    from b in compute7()
+    from c in add(a, b)
+    select c * 2;
+
+r.Result.Should().Be(24);
+```
+
+Note: Pokazać konwersję LINQ na fluent
 
 ***
 
