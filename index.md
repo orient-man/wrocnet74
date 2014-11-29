@@ -1,4 +1,4 @@
-﻿### Jak nauczyliśmy się programować funkcyjne nic o tym nie wiedząc
+﻿### Jak nauczyliśmy się programować funkcyjnie nic o tym nie wiedząc
 
 - Twitter: [@orientman](https://twitter.com/orientman)
 - GitHub: https://github.com/orient-man
