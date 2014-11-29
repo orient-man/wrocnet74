@@ -35,7 +35,7 @@ TODO: w pracy...
 
 ### DEMO: CSharpArgs refaktoring
 
-```c
+```cs
 // Example usage: Args.exe -l -p 4444 -d "C:\Windows\Temp"
 private static void Main(string[] args)
 {
