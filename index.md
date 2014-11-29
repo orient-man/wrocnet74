@@ -22,18 +22,23 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ***
 
-### Clean Code
+### Na początku było słowo (pisane)
 
-TODO: foto
-TODO: w pracy...
+<!-- .slide: data-background="./images/book.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
- - Opublikowana na początku w 2007r.
+<!-- .element: class="fragment" data-fragment-index="1" -->
+![Clean Code](./images/clean_code.jpg)
+
+ - Opublikowana na początku 2007r.
+ - Dobry prezent dla każdego programisty w zespole
  - Rozdział 14: refaktoring programu Args
  - Port 1-1 z Javy do C#
 
 ***
 
-### DEMO: CSharpArgs refaktoring
+### Args
+
+Każdy kiedyś popełnił parser argumentów :)
 
 ```cs
 // Example usage: Args.exe -l -p 4444 -d "C:\Windows\Temp"
@@ -47,7 +52,6 @@ private static void Main(string[] args)
     // ...
 }
 ```
-
 
 ---
 
@@ -101,8 +105,11 @@ To był nierówny bój...
 
 http://en.wikipedia.org/wiki/Don_Syme
 
----
+***
 
+<!-- .slide: data-background="./images/fp-way-bg.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
+
+### Functional way is the right way
 #### C# 6.0 (2015)
 
  - (?) Primary constructors
@@ -114,6 +121,10 @@ http://en.wikipedia.org/wiki/Don_Syme
  - Monadic null checking aka null propagator (x?.y)
  - Method &amp; property expressions (lambdas as definitions)
  - (?) Constructor type parameter inference (new Tuple(5, ""))
+
+***
+
+![Functional Way](./images/fp-way.jpg)
 
 ***
 
