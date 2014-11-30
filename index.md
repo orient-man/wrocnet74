@@ -26,7 +26,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 <!-- .slide: data-background="./images/book.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-<!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- .element: class="fragment" -->
 ![Clean Code](./images/clean_code.jpg)
 
  - Dobry prezent dla każdego programisty w zespole
@@ -186,8 +186,8 @@ Note: Pokazać konwersję LINQ na fluent
 
 ***
 
-- Item 1 <!-- .element: class="fragment" data-fragment-index="2" -->
-- Item 2 <!-- .element: class="fragment" data-fragment-index="1" -->
+- Item 1 <!-- .element: class="fragment" -->
+- Item 2 <!-- .element: class="fragment" -->
 
 ***
 
