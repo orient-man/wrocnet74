@@ -125,7 +125,9 @@ http://en.wikipedia.org/wiki/Don_Syme
 ***
 
 <!-- .slide: data-background="./images/skull.png" style="top: -50px !important;" -->
-# Monada
+## Gdzie te Monady?
+
+> "Monady – byty duchowe; nie mają charakteru czasowego ani przestrzennego"
 
 ---
 
@@ -138,9 +140,14 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 "Monada jest rodzajem <font color="#fa0">konstruktora abstrakcyjnego typu danych</font> [...] Monady pozwalają programiście <font color="#fa0">sprzęgać ze sobą kolejno wykonywane działania</font> i budować potoki danych, w których każda akcja jest materializacją wzorca <font color="#fa0">dekoratora z dodatkowymi regułami przetwarzającymi</font>.
 
-Formalnie monadę tworzy się definiując dwie operacje – wiązanie (ang. <font color="#fa0">bind</font>) i powrót (ang. <font color="#fa0">return</font>) [...] bla, bla, bla, Ginger, bla, bla, bla"
+Formalnie monadę tworzy się definiując dwie operacje – wiązanie (ang. <font color="#fa0">bind</font>) i powrót (ang. <font color="#fa0">return</font>) [...]"
 
 http://pl.wikipedia.org/wiki/Monada_%28programowanie%29
+
+---
+
+<!-- .slide: data-transition="convex" -->
+![Ginger](./images/ginger.jpeg)
 
 ---
 
