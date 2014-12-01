@@ -38,7 +38,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ### Args
 
-Każdy kiedyś popełnił parser argumentów :)
+Chyba każdy popełnił kiedyś parser argumentów:
 
 ```cs
 // Example usage: Args.exe -l -p 4444 -d "C:\Windows\Temp"
@@ -57,7 +57,7 @@ private static void Main(string[] args)
 
 ### DEMO
 
- - Alt-Enter i do przodu! :)
+ - Alt-Enter i do przodu!
 
 Note: CSharpArgs vs. CSharpArgs2
 
@@ -117,12 +117,159 @@ http://en.wikipedia.org/wiki/Don_Syme
  - (?) Primary constructors
  - Readonly auto properties
  - Static type using statements
- - Declaration expression (TryParse)
+ - Declaration expressions (TryParse)
  - Exception filters
  - (?) Pattern matching
  - Monadic null checking aka null propagator (x?.y)
  - Method &amp; property expressions (lambdas as definitions)
  - (?) Constructor type parameter inference (new Tuple(5, ""))
+
+---
+
+#### Primary constructors / Readonly auto properties
+
+F# już:
+```fsharp
+type Point(x, y) =
+    member this.x = x
+    member this.y = y
+```
+
+C# być może niedługo:
+```csharp
+public class Point(int x, int y)
+{
+    private int x, y;
+}
+```
+
+```csharp
+public class Point(int x, int y)
+{
+    public int X { get; } = x;
+    public int Y { get; } = y;
+}
+```
+
+---
+
+#### Static type using statements
+
+F# już:
+```fsharp
+module Math =
+    let Add x y = x + y
+
+Math.Add 2 2
+open Math
+Add 2 2
+```
+
+C# być może niedługo:
+```csharp
+public static class Math
+{
+    public static int Add(int x, int y) { return x + y; }
+}
+
+using Math;
+
+Add(2, 2);
+```
+
+---
+
+####  Declaration expressions
+
+F# już:
+```fsharp
+let success, x = Int32.TryParse("123")
+
+match TryParse("123") with true, x -> ... | _ -> ...
+```
+
+C# być może niedługo:
+```csharp
+if (int.TryParse("123", out int x)) ... else ...
+```
+
+---
+
+#### Exception filters
+
+F# już:
+```fsharp
+type ErrorCode = | UnexpectedArgument | InvalidFormat
+exception ArgsException of ErrorCode
+
+try
+    raise (ArgsException UnexpectedArgument)
+with
+  | ArgsException UnexpectedArgument -> printfn "Unexpected argument"
+  | ArgsException _ -> printfn "Other parsing error"
+```
+
+C# być może niedługo:
+```csharp
+try
+{
+    throw new ArgsException(ErrorCode.UnexpectedArgument);
+}
+catch (ArgsException e) if (e.ErrorCode == ErrorCode.UnexpectedArgument)
+{
+    // ...
+}
+```
+
+---
+
+#### Pattern matching
+
+To by było coś, ale pewnie nie będzie...
+
+Draft Spec dla C#: https://onedrive.live.com/view.aspx?resid=4558A04E77D0CF5!5396&app=Word
+
+Przykłady F#: jeszcze się pojawią :)
+
+---
+
+#### Monadic null checking aka null propagator
+
+F# już:
+```fsharp
+let (>>=) x y = Option.bind y x // generalnie mało przydatne
+```
+
+C# być może niedługo:
+```csharp
+var bestValue = points?.FirstOrDefault()?.X ?? -1;
+```
+
+---
+
+#### Method &amp; property expressions (lambdas as definitions)
+
+F#... ha, ha - wolne żarty.
+
+C# być może niedługo:
+```csharp
+public Point Move(int dx, int dy) => new Point(X + dx, Y + dy);
+public double Distance => Math.Sqrt((X * X) + (Y * Y));
+```
+
+---
+
+#### Constructor type parameter inference
+
+F# już:
+```fsharp
+let tuple = (5, "y")
+```
+
+C# być może niedługo:
+```csharp
+var tuple = new Tuple(5, "y"); // zamiast Tuple.Create(5, "y")
+```
 
 ***
 
