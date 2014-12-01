@@ -59,6 +59,8 @@ private static void Main(string[] args)
 
  - Alt-Enter i do przodu! :)
 
+Note: CSharpArgs vs. CSharpArgs2
+
 ***
 
 ### Java '07 vs. C# '14
@@ -322,6 +324,11 @@ Note: Playground.fs
 - Blog: [F# for fun and profit](http://fsharpforfunandprofit.com/) - skarbiec!
 - Artykuł: [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
 - Książka: [Real-World Functional Programming: With Examples in F# and C# - Petricek & Skeet](http://www.amazon.com/Real-World-Functional-Programming-With-Examples/dp/1933988924)
+
+Materiały:
+
+ - Slajdy: http://bstoknet46.orientman.com/
+ - Źródłowce: https://github.com/orient-man/CleanArgs
 
 ---
 
