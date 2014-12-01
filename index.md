@@ -297,9 +297,23 @@ Note: Playground.fs
 
 ***
 
-### Podsumowanie: co wybrać F# czy C#?
+<!-- .slide: data-background="./images/forcsharp1.png" -->
+### Podsumowanie - Co wybrać?
 
-TODO: 3x obrazki z rękopisu, jeden po drugim
+---
+
+<!-- .slide: data-background="./images/forcsharp2.png" data-transition="convex" -->
+### F#?
+
+---
+
+<!-- .slide: data-background="./images/forcsharp3.png" data-transition="convex" -->
+### C#?
+
+---
+
+<!-- .slide: data-background="./images/forcsharp4.png" data-transition="convex" -->
+### Polyglot Programming
 
 ***
 
