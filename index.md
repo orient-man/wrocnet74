@@ -55,7 +55,7 @@ private static void Main(string[] args)
 
 ---
 
-### DEMO: CSharpArgs2
+### DEMO
 
  - Alt-Enter i do przodu! :)
 
@@ -109,8 +109,8 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 <!-- .slide: data-background="./images/fp-way-bg.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-### Functional way is the right way
-#### C# 6.0 (2015)
+### Przyszłość: C# 6.0 (2015)
+#### Functional way is the right way
 
  - (?) Primary constructors
  - Readonly auto properties
