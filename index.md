@@ -191,3 +191,130 @@ r.Result.Should().Be(24);
 
 Note: Pokazać konwersję LINQ na fluent
 
+---
+
+### Przykłady typów monadycznych w C# ###
+
+- ``Nullable<T>``
+- ``Func<T>``
+- ``Lazy<T>``
+- ``Task<T>``
+- ``IEnumerable<T>``
+
+---
+
+### Ograniczenia Monad w C# ###
+
+- LINQ jest zaprojektowany do zapytań (zaskoczenie :)
+    - Brak instrukcji sterujących: if/then/else, pętli etc.
+- Brak uniwersalnego wsparcia dla typu "monadycznego" na poziomie języka np.: _notacja do_ w Haskellu, _computational expressions_ w F#
+
+<!-- .element: class="fragment" -->
+Stąd każdy typ monadyczny, aby w pełni się nim cieszyć wymaga zmian w składni C#.
+
+***
+
+### Computational Expressions in F# ###
+
+Workflow _async_ będący pierwowzorem dla składni _async/await_ w C#:
+
+```fsharp
+open System.IO
+open System.Net
+
+let downloadUrl(url : string) = async {
+    let request = HttpWebRequest.Create(url)
+    let! response = request.AsyncGetResponse()
+    use response = response
+    let stream = response.GetResponseStream()
+    use reader = new StreamReader(stream)
+    return! reader.AsyncReadToEnd()
+}
+```
+
+---
+
+...co kompiltor przetłumaczy na:
+```fsharp
+async.Delay(fun () ->
+    let request = HttpWebRequest.Create(url)
+    async.Bind(request.AsyncGetResponse(), fun response ->
+        async.Using(response, fun response ->
+            let stream = response.GetResponseStream()
+            async.Using(new StreamReader(stream), fun reader ->
+                reader.AsyncReadToEnd()))))
+```
+
+<!-- .element: class="fragment" -->
+![http://tia.mat.br/blog/html/2012/09/29/asynchronous_i_o_in_c_with_coroutines.html](./images/callbacks.jpg)
+
+---
+
+...gdzie ``async`` jest instancją klasy ``AsyncBuilder``:
+
+```fsharp
+type AsyncBuilder =
+    class
+        new AsyncBuilder : unit -> AsyncBuilder
+        member this.Bind : Async<'T> * ('T -> Async<'U>) -> Async<'U>
+        member this.Combine : Async<unit> * Async<'T> -> Async<'T>
+        member this.Delay : (unit -> Async<'T>) -> Async<'T>
+        member this.For : seq<'T> * ('T -> Async<unit>) -> Async<unit>
+        member this.Return : 'T -> Async<'T>
+        member this.ReturnFrom : Async<'T> -> Async<'T>
+        member this.TryFinally : Async<'T> * (unit -> unit) -> Async<'T>
+        member this.TryWith : Async<'T> * (exn -> Async<'T>) -> Async<'T>
+        member this.Using : 'T * ('T -> Async<'U>) -> Async<'U>
+        member this.While : (unit -> bool) * Async<unit> -> Async<unit>
+        member this.Zero : unit -> Async<unit>
+    end
+```
+
+<!-- .element: class="fragment" -->
+Na szczęście, aby używać LINQ-a nie musimy znać w każdym szczególe implementacji _LINQ Providera_ - to samo dotyczy _async_ i innych workflowów w F#.
+
+***
+
+### No dobrze, ale co to jest właściwie programowanie funkcyjne?
+
+Rychło w czas...
+
+---
+
+### Przykład
+
+<!-- .element: class="fragment" -->
+![https://twitter.com/gregyoung/status/58816147272896512](./images/foldleft.png)
+
+<!-- .element: class="fragment" -->
+DEMO z małym twistem, czyli "right fold" w F#
+
+Note: Playground.fs
+
+***
+
+### DEMO: FSharpArgs
+
+***
+
+### Podsumowanie: co wybrać F# czy C#?
+
+TODO: 3x obrazki z rękopisu, jeden po drugim
+
+***
+
+### Bibliografia
+
+- Blog: [F# for fun and profit](http://fsharpforfunandprofit.com/) - skarbiec!
+- Artykuł: [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
+- Książka: [Real-World Functional Programming: With Examples in F# and C# - Petricek & Skeet](http://www.amazon.com/Real-World-Functional-Programming-With-Examples/dp/1933988924)
+
+---
+
+### Bibliografia (Monady)
+
+- Video: [Mike Hadlow on Monads](http://vimeo.com/21705972)
+- Video: [Scott Wlaschin - Railway Oriented Programming -- error handling in functional languages](http://vimeo.com/97344498)
+- Video: [Greg Meredith - Monadic Design Patterns for the Web - Introduction to Monads](http://channel9.msdn.com/Series/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web-Introduction-to-Monads) - dla lubiących abstrakcję
+- Blog: [Fabulous adventures in coding: Monads, parts 1-13](http://ericlippert.com/category/monads/)
+
