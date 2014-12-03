@@ -29,10 +29,10 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 <!-- .element: class="fragment" -->
 ![Clean Code](./images/clean_code.jpg)
 
- - Dobry prezent dla każdego programisty w zespole
- - Opublikowana na początku 2007r.
- - Rozdział 14: refaktoring programu Args
- - Port 1-1 z Javy do C#
+- Dobry prezent dla każdego programisty w zespole
+- Opublikowana na początku 2007r.
+- Rozdział 14: refaktoring programu Args
+- Port 1-1 z Javy do C#
 
 ***
 
@@ -82,36 +82,36 @@ Note:
 Java '06 vs. C# '14 - bój był nierówny...
 
 Note:
-- stronniczy przegląd zmian w języku C#
+- za chwilę: stronniczy przegląd zmian w języku C#
 
 ***
 
 ## C# 2 (2005)
 
- - Generics
- - Nullable types and ?? operator
- - Generators aka iterators
- - Anonymous delegates
+- Generics
+- Nullable types and ?? operator
+- Generators aka iterators
+- Anonymous delegates
 
 ---
 
 ## C# 3 (2007)
 
- - LINQ
- - Anonymous types
- - Lambda expressions
- - Local variable type inference (var)
- - Object &amp; collection initializers
- - Automatic properties
- - ...
+- LINQ
+- Anonymous types
+- Lambda expressions
+- Local variable type inference (var)
+- Object &amp; collection initializers
+- Automatic properties
+- ...
 
 ---
 
 ## C# 5.0 &amp; .NET 4.5 (2012)
 
- - async / await
- - ``IReadOnlyList<>``, ``IReadOnlyDictionary<>``...
- - Microsoft.Bcl.Immutable
+- async / await
+- ``IReadOnlyList<>``, ``IReadOnlyDictionary<>``...
+- Microsoft.Bcl.Immutable
 
 ***
 
@@ -132,15 +132,15 @@ http://en.wikipedia.org/wiki/Don_Syme
 ## Quo vadis? - C# 6.0 (2015)
 ### Functional way is the right way
 
- - (?) Primary constructors
- - Readonly auto properties
- - Static type using statements
- - Declaration expressions (TryParse)
- - Exception filters
- - (?) Pattern matching
- - Monadic null checking aka null propagator (x?.y)
- - Method &amp; property expressions (lambdas as definitions)
- - (?) Constructor type parameter inference (new Tuple(5, ""))
+- (?) Primary constructors
+- Readonly auto properties
+- Static type using statements
+- Declaration expressions (TryParse)
+- Exception filters
+- (?) Pattern matching
+- Monadic null checking aka null propagator (x?.y)
+- Method &amp; property expressions (lambdas as definitions)
+- (?) Constructor type parameter inference (new Tuple(5, ""))
 
 ---
 
@@ -452,6 +452,9 @@ Na szczęście, aby używać LINQ-a nie musimy znać w każdym szczególe implem
 
 Rychło w czas...
 
+Note:
+- albo czym się jakościowo różni FP od OOP
+
 ---
 
 ### Przykład
@@ -463,17 +466,19 @@ Rychło w czas...
 DEMO z małym twistem, czyli "right fold" w F#
 
 Note:
- - bądźmy maksymalistami
- - Playground.fs
- - ciegiełkami są funkcje
 
+- bądźmy maksymalistami
+- Playground.fs
+- ciegiełkami są funkcje
+- ważne są typy
+- automatyczna generalizacja
 
 ***
 
 ### DEMO: Args w F# ###
 
 Note:
- - git checkout bang
+- git checkout bang
 
 ---
 
@@ -483,13 +488,13 @@ Note:
 Co się spotkało z szybką ripostą Wujka Boba: http://blog.cleancoder.com/uncle-bob/2014/11/24/FPvsOO.html
 
 Note:
- - zamiast podsumowania
- - skojarzenie lego Piraci vs. Technics
+- zamiast podsumowania
+- skojarzenie lego Piraci vs. Technics
 
 ***
 
 <!-- .slide: data-background="./images/forcsharp1.png" style="top: 300px !important;" -->
-## Podsumowanie
+## Na koniec
 
 <!-- .element: class="fragment" -->
 Co wybrać?
@@ -519,8 +524,8 @@ Co wybrać?
 
 Materiały:
 
- - Slajdy: http://bstoknet46.orientman.com/
- - Źródłowce: https://github.com/orient-man/CleanArgs
+- Slajdy: http://bstoknet46.orientman.com/
+- Źródłowce: https://github.com/orient-man/CleanArgs
 
 ---
 
