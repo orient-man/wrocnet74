@@ -55,19 +55,37 @@ private static void Main(string[] args)
 
 ---
 
-## DEMO
+# DEMO
 
- - Alt-Enter i do przodu!
+Note:
 
-Note: CSharpArgs vs. CSharpArgs2
+- dobre OOP, unit testy, top-down, krótkie metody, dobre nazwy, SRP, łatwo rozszerzalny
+- Alt-Enter i do przodu!
+- lambdy i factory method (na górę kod, który będzie rozszerzany)
+- ``Get<T>`` zamiast GetDouble... (nadal nie podoba mi się object)
+- 1 zamiast 5 "zmiennych" instancji
+- "zmienna", a raczej wartość bo się nie zmienia
+- pure functions
+- marshaller też jest w zasadzie funkcją
+- IEnumerator jedynym stanem
+
+---
+
+### Podsumowanie
+
+- mniej stanu, mniej drapania się po głowie
+- funkcje bez efektów ubocznych (wyjątek: ``IEnumerator``)
+- o działaniu czystych funkcji można wnioskować z samej deklaracji
+- LINQ, generics, lambdy, var...
+
+<!-- .element: class="fragment" -->
+Java '06 vs. C# '14 - bój był nierówny...
+
+Note:
+- stronniczy przegląd zmian w języku C#
 
 ***
 
-## Java '07 vs. C# '14
-
-To był nierówny bój...
-
----
 ## C# 2 (2005)
 
  - Generics
@@ -92,8 +110,8 @@ To był nierówny bój...
 ## C# 5.0 &amp; .NET 4.5 (2012)
 
  - async / await
- - IReadOnlyList<>, IReadOnlyDictionary<>...
- - BCL: ImmutableArray<>...
+ - ``IReadOnlyList<>``, ``IReadOnlyDictionary<>``...
+ - Microsoft.Bcl.Immutable
 
 ***
 
@@ -111,7 +129,7 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 <!-- .slide: data-background="./images/fp-way-bg.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-## Przyszłość: C# 6.0 (2015)
+## Quo vadis? - C# 6.0 (2015)
 ### Functional way is the right way
 
  - (?) Primary constructors
@@ -131,8 +149,8 @@ http://en.wikipedia.org/wiki/Don_Syme
 F# już:
 ```fsharp
 type Point(x, y) =
-    member this.x = x
-    member this.y = y
+    member this.X = x
+    member this.Y = y
 ```
 
 C# być może niedługo:
@@ -177,6 +195,8 @@ using Math;
 Add(2, 2);
 ```
 
+Note: czyli używajmy funkcji jak ludzie
+
 ---
 
 ###  Declaration expressions
@@ -184,7 +204,7 @@ Add(2, 2);
 F# już:
 ```fsharp
 let success, x = Int32.TryParse("123")
-
+// lub
 match TryParse("123") with true, x -> ... | _ -> ...
 ```
 
@@ -229,7 +249,7 @@ To by było coś, ale pewnie nie będzie...
 
 Draft Spec dla C#: https://onedrive.live.com/view.aspx?resid=4558A04E77D0CF5!5396&app=Word
 
-Przykłady F#: jeszcze się pojawią :)
+Note: przykłady w F# jeszcze się pojawią :)
 
 ---
 
@@ -268,10 +288,15 @@ let tuple = (5, "y")
 
 C# być może niedługo:
 ```csharp
-var tuple = new Tuple(5, "y"); // zamiast Tuple.Create(5, "y")
+// zamiast new Tuple<int, string>(5, "y") / Tuple.Create(5, "y")
+var tuple = new Tuple(5, "y");
 ```
 
 ***
+
+# Jeśli C# jest już językiem funkcyjnym to...
+
+---
 
 <!-- .slide: data-background="./images/skull.png" style="top: -50px !important;" -->
 ## Gdzie te Monady?
@@ -423,7 +448,7 @@ Na szczęście, aby używać LINQ-a nie musimy znać w każdym szczególe implem
 
 ***
 
-### No dobrze, ale co to jest właściwie programowanie funkcyjne?
+### No dobrze, ale co to właściwie jest programowanie funkcyjne?
 
 Rychło w czas...
 
@@ -437,11 +462,29 @@ Rychło w czas...
 <!-- .element: class="fragment" -->
 DEMO z małym twistem, czyli "right fold" w F#
 
-Note: Playground.fs
+Note:
+ - bądźmy maksymalistami
+ - Playground.fs
+ - ciegiełkami są funkcje
+
 
 ***
 
-### DEMO: FSharpArgs
+### DEMO: Args w F# ###
+
+Note:
+ - git checkout bang
+
+---
+
+<!-- .slide: data-background="./images/fp_contra_oop.jpg" -->
+
+<!-- .element: class="fragment" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.6);" -->
+Co się spotkało z szybką ripostą Wujka Boba: http://blog.cleancoder.com/uncle-bob/2014/11/24/FPvsOO.html
+
+Note:
+ - zamiast podsumowania
+ - skojarzenie lego Piraci vs. Technics
 
 ***
 
