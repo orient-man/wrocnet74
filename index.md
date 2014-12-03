@@ -146,14 +146,14 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 ### Primary constructors / Readonly auto properties
 
-F# już:
+F# dziś:
 ```fsharp
 type Point(x, y) =
     member this.X = x
     member this.Y = y
 ```
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 public class Point(int x, int y)
 {
@@ -173,7 +173,7 @@ public class Point(int x, int y)
 
 ### Static type using statements
 
-F# już:
+F# dziś:
 ```fsharp
 module Math =
     let Add x y = x + y
@@ -183,7 +183,7 @@ open Math
 Add 2 2
 ```
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 public static class Math
 {
@@ -201,14 +201,14 @@ Note: czyli używajmy funkcji jak ludzie
 
 ###  Declaration expressions
 
-F# już:
+F# dziś:
 ```fsharp
 let success, x = Int32.TryParse("123")
 // lub
 match TryParse("123") with true, x -> ... | _ -> ...
 ```
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 if (int.TryParse("123", out int x)) ... else ...
 ```
@@ -217,7 +217,7 @@ if (int.TryParse("123", out int x)) ... else ...
 
 ### Exception filters
 
-F# już:
+F# dziś:
 ```fsharp
 type ErrorCode = | UnexpectedArgument | InvalidFormat
 exception ArgsException of ErrorCode
@@ -229,7 +229,7 @@ with
   | ArgsException _ -> printfn "Other parsing error"
 ```
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 try
 {
@@ -245,22 +245,34 @@ catch (ArgsException e) if (e.ErrorCode == ErrorCode.UnexpectedArgument)
 
 ### Pattern matching
 
-To by było coś, ale pewnie nie będzie...
+F# dziś:
+```fsharp
+let selfAwareTroll n =
+    match n with
+    | 1 -> "one"
+    | 2 -> "two"
+    | (3 | 4) -> "some"
+    | a -> sprintf "i can't count to %d" a
+```
+
+C# ? - to by było coś...
 
 Draft Spec dla C#: https://onedrive.live.com/view.aspx?resid=4558A04E77D0CF5!5396&app=Word
 
-Note: przykłady w F# jeszcze się pojawią :)
+Note:
+- switch na dopingu
+- przykłady w F# jeszcze się pojawią :)
 
 ---
 
 ### Monadic null checking aka null propagator
 
-F# już:
+F# dziś:
 ```fsharp
 let (>>=) x y = Option.bind y x // generalnie mało przydatne
 ```
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 var bestValue = points?.FirstOrDefault()?.X ?? -1;
 ```
@@ -269,9 +281,9 @@ var bestValue = points?.FirstOrDefault()?.X ?? -1;
 
 ### Method &amp; property expressions (lambdas as definitions)
 
-F#... ha, ha - wolne żarty.
+F# dziś: ha, ha - wolne żarty
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 public Point Move(int dx, int dy) => new Point(X + dx, Y + dy);
 public double Distance => Math.Sqrt((X * X) + (Y * Y));
@@ -281,12 +293,12 @@ public double Distance => Math.Sqrt((X * X) + (Y * Y));
 
 ### Constructor type parameter inference
 
-F# już:
+F# dziś:
 ```fsharp
 let tuple = (5, "y")
 ```
 
-C# być może niedługo:
+C# 2015:
 ```csharp
 // zamiast new Tuple<int, string>(5, "y") / Tuple.Create(5, "y")
 var tuple = new Tuple(5, "y");
@@ -480,15 +492,13 @@ Note:
 Note:
 - git checkout bang
 
----
+***
 
 <!-- .slide: data-background="./images/fp_contra_oop.jpg" -->
 
-<!-- .element: class="fragment" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.6);" -->
-Co się spotkało z szybką ripostą Wujka Boba: http://blog.cleancoder.com/uncle-bob/2014/11/24/FPvsOO.html
-
 Note:
 - zamiast podsumowania
+- co się spotkało z szybką ripostą Wujka Boba (bibliografia)
 - skojarzenie lego Piraci vs. Technics
 
 ***
@@ -529,10 +539,19 @@ Materiały:
 
 ---
 
+### Bibligrafia (horyzonty)
+
+- [Don Syme - .NET/C# Generics History](http://blogs.msdn.com/b/dsyme/archive/2011/03/15/net-c-generics-history-some-photos-from-feb-1999.aspx)
+- [Jared Parsons - Experiences using F# in VsVim](http://blog.paranoidcoding.com/2014/10/31/experiences-using-fsharp-in-vsvim.html)
+- [John Carmack - In-depth: Functional programming in C++](http://gamasutra.com/view/news/169296/Indepth_Functional_programming_in_C.php)
+- [Robert C. Martin (Uncle Bob) - OO vs FP](http://blog.cleancoder.com/uncle-bob/2014/11/24/FPvsOO.html)
+
+---
+
 ### Bibliografia (Monady)
 
-- Video: [Mike Hadlow on Monads](http://vimeo.com/21705972)
+- Video: [Mike Hadlow on Monads](http://vimeo.com/21705972) - prościej się nie da?
 - Video: [Scott Wlaschin - Railway Oriented Programming -- error handling in functional languages](http://vimeo.com/97344498)
-- Video: [Greg Meredith - Monadic Design Patterns for the Web - Introduction to Monads](http://channel9.msdn.com/Series/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web-Introduction-to-Monads) - dla lubiących abstrakcję
-- Blog: [Fabulous adventures in coding: Monads, parts 1-13](http://ericlippert.com/category/monads/)
+- Video: [Greg Meredith - Monadic Design Patterns for the Web - Introduction to Monads](http://channel9.msdn.com/Series/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web-Introduction-to-Monads) - abstrakcyjnie, ale zjadliwie
+- Blog: [Fabulous adventures in coding: Monads, parts 1-13](http://ericlippert.com/category/monads/) - wyczerpująco
 
