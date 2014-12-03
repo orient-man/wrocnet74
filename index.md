@@ -373,8 +373,7 @@ open System.Net
 
 let downloadUrl(url : string) = async {
     let request = HttpWebRequest.Create(url)
-    let! response = request.AsyncGetResponse()
-    use response = response
+    use! response = request.AsyncGetResponse()
     let stream = response.GetResponseStream()
     use reader = new StreamReader(stream)
     return! reader.AsyncReadToEnd()
