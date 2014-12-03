@@ -24,7 +24,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ## Na początku było słowo (pisane)
 
-<!-- .slide: data-background="./images/book.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
+<!-- .slide: data-background="./images/book.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
 <!-- .element: class="fragment" -->
 ![Clean Code](./images/clean_code.jpg)
