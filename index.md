@@ -1,4 +1,4 @@
-﻿### Jak nauczyliśmy się programować funkcyjnie nic o tym nie wiedząc
+﻿## Jak nauczyliśmy się programować funkcyjnie nic o tym nie wiedząc
 
 - Twitter: [@orientman](https://twitter.com/orientman)
 - GitHub: https://github.com/orient-man
@@ -6,13 +6,13 @@
 
 ---
 
-### Abstrakt
+## Abstrakt
 
 Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęli zadawać się z monoidami i zapuszczać funktory, pojawiły się w języku C#. U licha! już ładnych kilka lat piszemy funkcyjnie, nic o tym nie wiedząc. Przyjrzymy się długoletniej pracy chochlików na usługach funkcyjnej policji myśli. Punktem startu będzie najczystszy możliwy kod obiektowy zrefaktorowany przez Wujka Boba, który… poprawimy, a może nawet przepiszemy.
 
 ---
 
-### O mnie
+## O mnie
 
 - Tata^2, mąż humanistki, mól książkowy, uparciuch, programista, konferencjoholik.  Don Kichot walczący z entropią. Kocha sprzeczności i humor. Wierzy w przypadek. Piwny filozof. W nielicznych wolnych chwilach harata w gałę (na bramce).
 
@@ -22,7 +22,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ***
 
-### Na początku było słowo (pisane)
+## Na początku było słowo (pisane)
 
 <!-- .slide: data-background="./images/book.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
@@ -36,7 +36,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ***
 
-### Args
+## Args
 
 Chyba każdy popełnił kiedyś parser argumentów:
 
@@ -55,7 +55,7 @@ private static void Main(string[] args)
 
 ---
 
-### DEMO
+## DEMO
 
  - Alt-Enter i do przodu!
 
@@ -63,12 +63,12 @@ Note: CSharpArgs vs. CSharpArgs2
 
 ***
 
-### Java '07 vs. C# '14
+## Java '07 vs. C# '14
 
 To był nierówny bój...
 
 ---
-#### C# 2 (2005)
+## C# 2 (2005)
 
  - Generics
  - Nullable types and ?? operator
@@ -77,7 +77,7 @@ To był nierówny bój...
 
 ---
 
-#### C# 3 (2007)
+## C# 3 (2007)
 
  - LINQ
  - Anonymous types
@@ -89,7 +89,7 @@ To był nierówny bój...
 
 ---
 
-#### C# 5.0 &amp; .NET 4.5 (2012)
+## C# 5.0 &amp; .NET 4.5 (2012)
 
  - async / await
  - IReadOnlyList<>, IReadOnlyDictionary<>...
@@ -97,7 +97,7 @@ To był nierówny bój...
 
 ***
 
-### Unde malum?
+## Unde malum?
 
 ![https://twitter.com/dsyme/status/409476721780334592](./images/donsyme.png)
 
@@ -111,8 +111,8 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 <!-- .slide: data-background="./images/fp-way-bg.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-### Przyszłość: C# 6.0 (2015)
-#### Functional way is the right way
+## Przyszłość: C# 6.0 (2015)
+### Functional way is the right way
 
  - (?) Primary constructors
  - Readonly auto properties
@@ -126,7 +126,7 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 ---
 
-#### Primary constructors / Readonly auto properties
+### Primary constructors / Readonly auto properties
 
 F# już:
 ```fsharp
@@ -153,7 +153,7 @@ public class Point(int x, int y)
 
 ---
 
-#### Static type using statements
+### Static type using statements
 
 F# już:
 ```fsharp
@@ -179,7 +179,7 @@ Add(2, 2);
 
 ---
 
-####  Declaration expressions
+###  Declaration expressions
 
 F# już:
 ```fsharp
@@ -195,7 +195,7 @@ if (int.TryParse("123", out int x)) ... else ...
 
 ---
 
-#### Exception filters
+### Exception filters
 
 F# już:
 ```fsharp
@@ -223,7 +223,7 @@ catch (ArgsException e) if (e.ErrorCode == ErrorCode.UnexpectedArgument)
 
 ---
 
-#### Pattern matching
+### Pattern matching
 
 To by było coś, ale pewnie nie będzie...
 
@@ -233,7 +233,7 @@ Przykłady F#: jeszcze się pojawią :)
 
 ---
 
-#### Monadic null checking aka null propagator
+### Monadic null checking aka null propagator
 
 F# już:
 ```fsharp
@@ -247,7 +247,7 @@ var bestValue = points?.FirstOrDefault()?.X ?? -1;
 
 ---
 
-#### Method &amp; property expressions (lambdas as definitions)
+### Method &amp; property expressions (lambdas as definitions)
 
 F#... ha, ha - wolne żarty.
 
@@ -259,7 +259,7 @@ public double Distance => Math.Sqrt((X * X) + (Y * Y));
 
 ---
 
-#### Constructor type parameter inference
+### Constructor type parameter inference
 
 F# już:
 ```fsharp
@@ -363,7 +363,7 @@ Stąd każdy typ monadyczny, aby w pełni się nim cieszyć wymaga zmian w skła
 
 ***
 
-### Computational Expressions in F# ###
+## Computational Expressions w F# ##
 
 Workflow _async_ będący pierwowzorem dla składni _async/await_ w C#:
 
@@ -446,27 +446,30 @@ Note: Playground.fs
 
 ***
 
-<!-- .slide: data-background="./images/forcsharp1.png" -->
-### Podsumowanie - Co wybrać?
+<!-- .slide: data-background="./images/forcsharp1.png" style="top: 300px !important;" -->
+## Podsumowanie
+
+<!-- .element: class="fragment" -->
+Co wybrać?
 
 ---
 
 <!-- .slide: data-background="./images/forcsharp2.png" data-transition="convex" -->
-### F#?
+# F#?
 
 ---
 
 <!-- .slide: data-background="./images/forcsharp3.png" data-transition="convex" -->
-### C#?
+# C#?
 
 ---
 
 <!-- .slide: data-background="./images/forcsharp4.png" data-transition="convex" -->
-### Polyglot Programming
+## Polyglot Programming!
 
 ***
 
-### Bibliografia
+## Bibliografia
 
 - Blog: [F# for fun and profit](http://fsharpforfunandprofit.com/) - skarbiec!
 - Artykuł: [Why Functional Programming Matters](http://www.cse.chalmers.se/~rjmh/Papers/whyfp.html)
