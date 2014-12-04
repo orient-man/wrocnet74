@@ -315,6 +315,9 @@ var tuple = new Tuple(5, "y");
 
 > "Monady – byty duchowe; nie mają charakteru czasowego ani przestrzennego"
 
+Note:
+ - zapytajmy eksperta
+
 ---
 
 <!-- .slide: style="top: -100px !important;" -->
