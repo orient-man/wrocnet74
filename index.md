@@ -365,21 +365,31 @@ public static Task<C> SelectMany<A, B, C>(
 ### Co to robi?
 
 ```csharp
-Func<Task<int>> compute5 = () => 5.ToTask();
-Func<Task<int>> compute7 = () => 7.ToTask();
+Func<Task<int>> compute3 = () => 3.ToTask();
+Func<int, int, Task<int>> prod = (x, y) => (x * y).ToTask();
 Func<int, int, Task<int>> add = (x, y) => (x + y).ToTask();
 
 var r =
-    from a in compute5()
-    from b in compute7()
-    from c in add(a, b)
-    select c * 2;
+    from a in compute3()
+    from b in prod(a, 2)
+    from c in add(b, 4)
+    select c.ToString();
 
-r.Result.Should().Be(24);
+r.Result.Should().Be("10");
+```
+
+---
+
+### Co kompilator tłumaczy na:
+
+```csharp
+var r =
+    compute3()
+        .SelectMany(a => prod(a, 2), (a, b) => new { a, b })
+        .SelectMany(ab => add(ab.b, 4), (ab, c) => c.ToString());
 ```
 
 Note: Pokazać konwersję LINQ na fluent
-
 ---
 
 ### Przykłady typów monadycznych w C# ###
