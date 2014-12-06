@@ -389,7 +389,6 @@ var r =
         .SelectMany(ab => add(ab.b, 4), (ab, c) => c.ToString());
 ```
 
-Note: Pokazać konwersję LINQ na fluent
 ---
 
 ### Przykłady typów monadycznych w C# ###
