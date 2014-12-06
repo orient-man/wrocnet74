@@ -7,6 +7,7 @@
 - 1 zamiast 5 "zmiennych" instancji
 - "zmienna", a raczej wartość bo się nie zmienia
 - pure functions
+- z pewnym kosztem: dłuższe deklaracje (brak type inference)
 - marshaller też jest w zasadzie funkcją
 - IEnumerator jedynym stanem
 
@@ -26,18 +27,19 @@
 
 - unia dyskryminująca (enum++) ErrorCode
 - monada ROP (Scott Wlaschin) zamiast wyjątków
- - rozwinięcie tego co zrobił Uncle Bob (Exception -> ArgException(ErrorCode))
+ - rozwinięcie tego co zrobił Uncle Bob (Exception -> ArgException(ErrorCode) -> Failure(ErrorCode))
  - dokumentuje wszystko co może pójść nie tak
  - more explicit, pokazuje ukryte wymagania
  - type safe (nie postawimy try/catch w złym miejscu)
  - ułatwia testowanie
  - ułatwia tłumaczenie etc.
-- deklaracja typów (opcjonalne, komputer sobie bez nich poradzi)
 - komponuje funkcję w ten sposób, że głównym torem sukces, a drugim porażka (skrót, pomija kolejne wywołania)
+- deklaracja typów (opcjonalne, komputer sobie bez nich poradzi)
+ - w C#/Java tworzymy zmienne instancji, aby uniknąć przepychania przez argumenty
 - ? Script.fsx
 - oddzielone parsowanie schematu od parsowania argumentów (Args nie był pisany w TDD)
 - |> jak LINQ - porównać kod
-- inny "proces twórczy": REPL
-- StringListMarshaller - praca domowa z książki
-- ValidArgument - active pattern
-- git checkout bang
+- ? inny "proces twórczy": REPL
+- ? StringListMarshaller - praca domowa z książki
+- ? ValidArgument - active pattern
+- ? git checkout bang
