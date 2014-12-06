@@ -349,7 +349,7 @@ public static Task<T> ToTask<T>(this T value) // aka "unit" lub "return"
 
 public static Task<B> Bind<A, B>(this Task<A> a, Func<A, Task<B>> func)
 {
-    return a.ContinueWith(b => func(b.Result)).Unwrap();
+    return a.ContinueWith(prev => func(prev.Result)).Unwrap();
 }
 
 public static Task<C> SelectMany<A, B, C>(
@@ -558,3 +558,6 @@ Materiały:
 - Video: [Greg Meredith - Monadic Design Patterns for the Web - Introduction to Monads](http://channel9.msdn.com/Series/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web/C9-Lectures-Greg-Meredith-Monadic-Design-Patterns-for-the-Web-Introduction-to-Monads) - abstrakcyjnie, ale zjadliwie
 - Blog: [Fabulous adventures in coding: Monads, parts 1-13](http://ericlippert.com/category/monads/) - wyczerpująco
 
+***
+
+# Aaa... pytania?
