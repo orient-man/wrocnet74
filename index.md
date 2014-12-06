@@ -29,7 +29,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 <!-- .element: class="fragment" -->
 ![Clean Code](./images/clean_code.jpg)
 
-- Dobry prezent dla każdego programisty w zespole
+- Dobry prezent dla każdego nowego programisty w zespole
 - Opublikowana na początku 2007r.
 - Rozdział 14: refaktoring programu Args
 - Port 1-1 z Javy do C#
@@ -509,8 +509,28 @@ Note:
 
 <!-- .slide: data-background="./images/fp_contra_oop.jpg" -->
 
+<div class="fragment">
+
 Note:
-- zamiast podsumowania
+- co się spotkało z szybką ripostą Wujka Boba (bibliografia)
+- skojarzenie lego Piraci vs. Technics
+
+***
+
+<!-- .slide: data-background="./images/fp_contra_oop.jpg" style="display: block; background: rgba(0, 0, 0, 0.4);" -->
+
+## Podsumowanie
+
+C# | F#
+--- | ---
+wyjątki | funkcje dwutorowe (monada ROP)
+pętle | funkcje rekurencyjne
+zmienne | parametry funkcji (akumulator)
+składnia *fluent* | częściowa aplikacja argumentów
+if/then/else/switch| pattern matching
+...
+
+Note:
 - co się spotkało z szybką ripostą Wujka Boba (bibliografia)
 - skojarzenie lego Piraci vs. Technics
 
