@@ -81,10 +81,14 @@ Note:
 <!-- .element: class="fragment" -->
 Java '06 vs. C# '14 - bój był nierówny...
 
+***
+
+## Teza: C# przyjazny dla FP i to nie jest przypadek
+
 Note:
 - za chwilę: stronniczy przegląd zmian w języku C#
 
-***
+---
 
 ## C# 2 (2005)
 
@@ -112,6 +116,9 @@ Note:
 - async / await
 - ``IReadOnlyList<>``, ``IReadOnlyDictionary<>``...
 - Microsoft.Bcl.Immutable
+
+Note:
+ - skąd się to wzięło, kto nam tak język komplikuje?
 
 ***
 
