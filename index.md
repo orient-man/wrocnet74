@@ -515,13 +515,11 @@ Note:
 
 <!-- .slide: data-background="./images/fp_contra_oop.jpg" -->
 
-<div class="fragment">
-
 Note:
 - co się spotkało z szybką ripostą Wujka Boba (bibliografia)
 - skojarzenie lego Piraci vs. Technics
 
-***
+---
 
 <!-- .slide: data-background="./images/fp_contra_oop.jpg" style="display: block; background: rgba(0, 0, 0, 0.4);" -->
 
@@ -538,7 +536,22 @@ if/then/else/switch| pattern matching
 
 Note:
 - co się spotkało z szybką ripostą Wujka Boba (bibliografia)
+- F# bez części kompatybilnej z C# byłby małym językiem
 - skojarzenie lego Piraci vs. Technics
+- ponad różnicami składnowymi, które są oczywiście ważne...
+
+---
+
+## Intuicje
+
+ - ewolucja od monolitu do niezależnych jednostek; najpierw obiektów, potem funkcji
+ - małe jednostki łatwiej zrozumieć, są elastyczne i dają szybką pętlę zwrotną (REPL, testy)
+ - system typów może być pomocą a nie zawalidrogą (static vs. dynamic typing? static + type inference!)
+ - nie musimy wszytkiego pisać funkcyjnie, ważne co widać z zewnątrz
+
+Note:
+
+ - FP jest trudne, może boleć głowa ;)
 
 ***
 
