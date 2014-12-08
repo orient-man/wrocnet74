@@ -83,12 +83,15 @@ Java '06 vs. C# '14 - bój był nierówny...
 
 ***
 
-## Teza: C# przyjazny dla FP i to nie jest przypadek
+<!-- .slide: data-background="./images/features1.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
+## Teza: C# z każdą wersją coraz bardziej przyjazny dla FP i to nie jest przypadek
 
 Note:
 - za chwilę: stronniczy przegląd zmian w języku C#
 
 ---
+
+<!-- .slide: data-background="./images/features2.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
 ## C# 2 (2005)
 
@@ -99,6 +102,7 @@ Note:
 
 ---
 
+<!-- .slide: data-background="./images/features3.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 ## C# 3 (2007)
 
 - LINQ
@@ -111,11 +115,27 @@ Note:
 
 ---
 
+<!-- .slide: data-background="./images/features4.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 ## C# 5.0 &amp; .NET 4.5 (2012)
 
 - async / await
 - ``IReadOnlyList<>``, ``IReadOnlyDictionary<>``...
 - Microsoft.Bcl.Immutable
+
+---
+
+## C# 6.0 (2015)
+<!-- .slide: data-background="./images/features5.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
+
+- (?) Primary constructors
+- Readonly auto properties
+- Static type using statements
+- Declaration expressions
+- Exception filters
+- (?) Pattern matching
+- Monadic null checking aka null propagator
+- Method &amp; property expressions
+- (?) Constructor type parameter inference
 
 Note:
  - skąd się to wzięło, kto nam tak język komplikuje?
@@ -136,18 +156,9 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 <!-- .slide: data-background="./images/fp-way-bg.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-## Quo vadis? - C# 6.0 (2015)
-### Functional way is the right way
+# C# 6
 
-- (?) Primary constructors
-- Readonly auto properties
-- Static type using statements
-- Declaration expressions (TryParse)
-- Exception filters
-- (?) Pattern matching
-- Monadic null checking aka null propagator (x?.y)
-- Method &amp; property expressions (lambdas as definitions)
-- (?) Constructor type parameter inference (new Tuple(5, ""))
+## Functional way is the right way
 
 ---
 
