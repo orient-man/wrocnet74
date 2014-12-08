@@ -602,6 +602,10 @@ Materiały:
 
 ---
 
+![Rękopis znaleziony w Saragossie](./images/rekopis.jpg)
+
+---
+
 ### Bibligrafia (horyzonty)
 
 - [Don Syme - .NET/C# Generics History](http://blogs.msdn.com/b/dsyme/archive/2011/03/15/net-c-generics-history-some-photos-from-feb-1999.aspx)
