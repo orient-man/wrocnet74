@@ -154,11 +154,11 @@ http://en.wikipedia.org/wiki/Don_Syme
 
 ***
 
-<!-- .slide: data-background="./images/fp-way-bg.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
+<!-- .slide: data-background="./images/fp-way-bg.jpg" -->
 
 # C# 6
 
-## Functional way is the right way
+# Functional way is the right way
 
 ---
 
