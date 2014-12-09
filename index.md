@@ -555,14 +555,16 @@ Note:
 
 ## Intuicje
 
- - ewolucja od monolitu do niezależnych jednostek; najpierw obiektów, potem funkcji
+ - naturalna ewolucja od monolitu do niezależnych jednostek; najpierw obiektów, potem funkcji
  - małe jednostki łatwiej zrozumieć, są elastyczne i dają szybką pętlę zwrotną (REPL, testy)
- - system typów może być pomocą a nie zawalidrogą (static vs. dynamic typing? static + type inference!)
+ - system typów może być pomocą a nie zawalidrogą (*static* vs. *dynamic typing*? *static* + *type inference*!)
  - nie musimy wszytkiego pisać funkcyjnie, ważne co widać z zewnątrz
+  - w C# nie powinniśmy brnąć w kierunku FP za wszelką cenę
 
 Note:
 
  - FP jest trudne, może boleć głowa ;)
+ - nie chodzi o to bym Was nauczył, a zainspirować: programowanie jest fajne!
 
 ***
 
