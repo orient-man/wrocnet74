@@ -101,6 +101,8 @@ Note:
 - Nullable types and ?? operator
 - Generators aka iterators
 - Anonymous delegates
+- Static classes
+- ...
 
 ---
 
@@ -132,7 +134,7 @@ Note:
 - (?) Primary constructors
 - Readonly auto properties
 - Static type using statements
-- Declaration expressions
+- (?) Declaration expressions
 - Exception filters
 - (?) Pattern matching
 - Monadic null checking aka null propagator
@@ -141,6 +143,8 @@ Note:
 
 Note:
  - skąd się to wzięło, kto nam tak język komplikuje?
+ - (?) - C# 7
+ - inne: semicolon operator: var y = (var x = Foo(); Write(x); x * x))
 
 ***
 
