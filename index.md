@@ -1,5 +1,7 @@
 ﻿## Jak nauczyliśmy się programować funkcyjnie nic o tym nie wiedząc
 
+Marcin Malinowski
+
 - Twitter: [@orientman](https://twitter.com/orientman)
 - GitHub: https://github.com/orient-man
 - Blog: https://orientman.wordpress.com/
