@@ -68,12 +68,14 @@ Note:
 - 1 zamiast 5 "zmiennych" instancji
 - "zmienna", a raczej wartość bo się nie zmienia
 - pure functions
+- klasa Args stała się "workiem" na funkcje
 - marshaller też jest w zasadzie funkcją
 - IEnumerator jedynym stanem
 
 ---
 
-### Podsumowanie
+## Podsumowanie
+### Refactoring to functional
 
 - mniej stanu, mniej drapania się po głowie
 - funkcje bez efektów ubocznych (wyjątek: ``IEnumerator``)
