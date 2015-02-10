@@ -22,6 +22,7 @@
 - z pewnym kosztem: dłuższe deklaracje (brak type inference)
 - marshaller też jest w zasadzie funkcją
 - IEnumerator jedynym stanem
+- "ufunkcyjnienie" rozwiązania obiektowego: czyste funkcje, brak stanu
 
 # DEMO: Playground.fs
 
