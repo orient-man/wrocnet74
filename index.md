@@ -38,26 +38,10 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ***
 
-## Args
+<!-- .slide: data-background="./images/spices.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-Chyba każdy popełnił kiedyś parser argumentów:
-
-```cs
-// Example usage: Args.exe -l -p 4444 -d "C:\Windows\Temp"
-private static void Main(string[] args)
-{
-    var schema = "l,p#,d*";
-    var arg = new Args(schema, args);
-    var logging = arg.GetBoolean('l');
-    var port = arg.GetInt('p');
-    var directory = arg.GetString('d');
-    // ...
-}
-```
-
----
-
-# DEMO
+## Kod przyprawiony funkcyjnie
+### DEMO
 
 Note:
 
@@ -88,7 +72,7 @@ Java '06 vs. C# '14 - bój był nierówny...
 ***
 
 <!-- .slide: data-background="./images/features1.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
-## Teza: C# z każdą wersją coraz bardziej przyjazny dla FP i to nie jest przypadek
+## Teza: C# z każdą wersją zawiera coraz więcej przypraw funkcyjnych i to nie jest przypadek
 
 Note:
 - za chwilę: stronniczy przegląd zmian w języku C#
