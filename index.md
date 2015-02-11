@@ -432,7 +432,7 @@ var r =
 <!-- .element: class="fragment" -->
 Stąd każdy typ monadyczny, aby w pełni się nim cieszyć wymaga zmian w składni C#.
 
-***
+---
 
 ## Computational Expressions w F# ##
 
