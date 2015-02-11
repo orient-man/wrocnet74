@@ -24,7 +24,19 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ***
 
-## Na początku było słowo (pisane)
+## Spis rzeczy
+
+1. Czysty kod obiektowy
+2. Kod przyprawiony funkcyjnie
+3. Spojrzenie za siebie
+4. Spojrzenie przed siebie
+5. Programowanie funkcyjne w pigułce
+6. Zagraj to jeszcze raz, Sam
+7. Podsumowanie
+
+***
+
+## Na początku było słowo
 
 <!-- .slide: data-background="./images/book.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
 
