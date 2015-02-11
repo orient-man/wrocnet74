@@ -607,7 +607,7 @@ Co wybrać?
 
 Materiały:
 
-- Slajdy: http://bstoknet46.orientman.com/
+- Slajdy: http://wgnet83.orientman.com/
 - Źródłowce: https://github.com/orient-man/CleanArgs
 
 ---
