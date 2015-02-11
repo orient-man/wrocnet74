@@ -595,6 +595,10 @@ Co wybrać?
 
 ***
 
+![Rękopis znaleziony w Saragossie](./images/rekopis.jpg)
+
+***
+
 ## Bibliografia
 
 - Blog: [F# for fun and profit](http://fsharpforfunandprofit.com/) - skarbiec!
@@ -605,10 +609,6 @@ Materiały:
 
 - Slajdy: http://bstoknet46.orientman.com/
 - Źródłowce: https://github.com/orient-man/CleanArgs
-
----
-
-![Rękopis znaleziony w Saragossie](./images/rekopis.jpg)
 
 ---
 
