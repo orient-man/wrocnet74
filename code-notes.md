@@ -1,15 +1,3 @@
-# Spis rzeczy
-
-1. Wstęp
-2. CleanCode w OOP na przykładzie (Args)
-3. "Refaktoring to functional" (TM Hadi Hariri)
-4. Przenikanie FP do C# - przegląd zmian w języku
-5. Porównanie C# 6 vs. F#
-6. Monady
-7. FP in a nutshell (fold)
-8. Args w F#
-9. Podsumowanie
-
 # DEMO: Args
 
 - dobre OOP, unit testy, top-down, krótkie metody, dobre nazwy, SRP, łatwo rozszerzalny
@@ -40,6 +28,7 @@
 
 - unia dyskryminująca (enum++) ErrorCode
 - monada ROP (Scott Wlaschin) zamiast wyjątków
+ - "error propagator"
  - rozwinięcie tego co zrobił Uncle Bob (Exception -> ArgException(ErrorCode) -> Failure(ErrorCode))
  - dokumentuje wszystko co może pójść nie tak
  - more explicit, pokazuje ukryte wymagania
