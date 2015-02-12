@@ -324,6 +324,8 @@ C# 2015:
 ```csharp
 // zamiast new Tuple<int, string>(5, "y") / Tuple.Create(5, "y")
 var tuple = new Tuple(5, "y");
+// zamiast new KeyValuePair<string, Tuple<int, string>>(...)
+var pair = new KeyValuePair("x", tuple);
 ```
 
 ***
