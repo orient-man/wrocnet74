@@ -328,6 +328,16 @@ var tuple = new Tuple(5, "y");
 
 ***
 
+## Z ostatniej chwili...
+
+C# 7 Design Meeting Notes (2015-01-21):
+
+> Let’s continue being inspired by functional languages, and in particular other languages – F#, Scala, Swift – that aim to mix functional and object-oriented concepts as smoothly as possible
+
+https://github.com/dotnet/roslyn/issues/98
+
+***
+
 # Jeśli C# jest już językiem funkcyjnym to...
 
 ---
