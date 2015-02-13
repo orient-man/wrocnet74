@@ -84,7 +84,7 @@ Java '06 vs. C# '14 - bój był nierówny...
 ***
 
 <!-- .slide: data-background="./images/features1.png" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
-## Teza: C# z każdą wersją zawiera coraz więcej przypraw funkcyjnych i to nie jest przypadek
+## Teza: C# z każdą wersją zawiera coraz więcej "przypraw" funkcyjnych i to nie jest przypadek
 
 Note:
 - za chwilę: stronniczy przegląd zmian w języku C#
