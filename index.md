@@ -383,7 +383,7 @@ Note:
 
 <!-- .slide: data-background="./images/fp_contra_oop.jpg" style="display: block; background: rgba(0, 0, 0, 0.4);" -->
 
-## Podsumowanie
+## Samouczek funkcyjny
 
 C# | F#
 --- | ---
