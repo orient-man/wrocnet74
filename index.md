@@ -389,7 +389,7 @@ C# | F#
 --- | ---
 wyjątki | funkcje dwutorowe (monada ROP)
 pętle | funkcje rekurencyjne
-zmienne | parametry funkcji (akumulator)
+zmienne | parametry funkcji (akumulator), monady
 składnia *fluent* | częściowa aplikacja argumentów
 if/then/else/switch| pattern matching
 ...
