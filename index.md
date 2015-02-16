@@ -402,13 +402,14 @@ Note:
 
 ---
 
-## Intuicje
+## Intuicje zamiast podsumowania
 
- - naturalna ewolucja od monolitu do niezależnych jednostek; najpierw obiektów, potem funkcji
- - małe jednostki łatwiej zrozumieć, są elastyczne i dają szybką pętlę zwrotną (REPL, testy)
- - system typów może być pomocą a nie zawalidrogą (*static* vs. *dynamic typing*? *static* + *type inference*!)
- - nie musimy wszytkiego pisać funkcyjnie, ważne co widać z zewnątrz
-  - w C# nie powinniśmy brnąć w kierunku FP za wszelką cenę
+ - <!-- .element: class="fragment" --> C# czerpie pełnymi garściami z języków funkcyjnych
+ - <!-- .element: class="fragment" --> prawdopodobnie zawsze pozostanie w kategorii "OOP first"
+ - <!-- .element: class="fragment" --> system typów może być pomocą a nie zawalidrogą (*static* vs. *dynamic typing*? *static* + *type inference*!)
+ - <!-- .element: class="fragment" --> naturalna ewolucja od monolitu do niezależnych jednostek; najpierw obiektów, potem funkcji
+ - <!-- .element: class="fragment" --> małe jednostki łatwiej zrozumieć, są elastyczne i dają szybką pętlę zwrotną (REPL, testy)
+ - <!-- .element: class="fragment" --> nie powinniśmy brnąć w kierunku FP za wszelką cenę
 
 Note:
 
