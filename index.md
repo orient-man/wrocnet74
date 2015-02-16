@@ -50,10 +50,7 @@ Elementy programowania funkcyjnego, na długo przed tym, zanim hipsterzy zaczęl
 
 ***
 
-<!-- .slide: data-background="./images/spices.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
-
-## Kod przyprawiony funkcyjnie
-### DEMO
+## DEMO: Args w C# ##
 
 Note:
 
@@ -70,8 +67,10 @@ Note:
 
 ---
 
+<!-- .slide: data-background="./images/spices.jpg" style="padding: 20px; display: block; background: rgba(0, 0, 0, 0.4);" -->
+
 ## Podsumowanie
-### Refactoring to functional
+### Kod przyprawiony funkcyjnie
 
 - mniej stanu, mniej drapania się po głowie
 - funkcje bez efektów ubocznych (wyjątek: ``IEnumerator``)
