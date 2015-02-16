@@ -452,7 +452,7 @@ Co wybrać?
 
 Materiały:
 
-- Slajdy: http://wgnet83.orientman.com/
+- Slajdy: http://wrocnet74.orientman.com/
 - Źródłowce: https://github.com/orient-man/CleanArgs
 
 ---
